@@ -18,15 +18,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
 import static android.content.Context.CONNECTIVITY_SERVICE;
+
 
 /**
  * Fragment to display list of news items as fetched from Guardian News API

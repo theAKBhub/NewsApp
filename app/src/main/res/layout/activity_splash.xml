@@ -13,7 +13,4 @@
     <ImageView
         style="@style/ImageViewLogo"/>
 
-    <!--<ImageView-->
-        <!--style="@style/ImageViewVector"/>-->
-
 </LinearLayout>

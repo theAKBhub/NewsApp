@@ -21,7 +21,6 @@
     <string name="menu_weather">Weather</string>
     <string name="menu_world">World</string>
 
-
     <!-- Placeholder Texts -->
     <string name="placeholder_news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="placeholder_news_author">Joe Bloggs</string>

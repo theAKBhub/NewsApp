@@ -10,11 +10,11 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.DatePicker;
 import android.widget.Toast;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -77,6 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
                 fromDatePref.setSummary(dateFormat.format(calendar.getTime()));
             }
 
+            /** Set date picked from calendar as preferred date */
             fromDatePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(final Preference preference) {

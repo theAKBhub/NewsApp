@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+
 /**
  * A {@link NewsAdapter} will create a list item layout for each news item
  * in the data source (a list of {@link NewsItem} objects) to be displayed in a ListView
@@ -122,7 +123,7 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
     }
 
     /**
-     * Method to check if Published Date exists, then formats it if the extracted date is a valid date
+     * Method to check if Published Date exists, then format it if the extracted date is a valid date
      */
     public String formatDate(String date) {
 
