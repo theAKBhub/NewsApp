@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/menu_home"
+            android:title="@string/menu_home"/>
+        <item
+            android:id="@+id/nav_business"
+            android:icon="@drawable/menu_business"
+            android:title="@string/menu_business"/>
+        <item
+            android:id="@+id/nav_education"
+            android:icon="@drawable/menu_education"
+            android:title="@string/menu_education"/>
+        <item
+            android:id="@+id/nav_environment"
+            android:icon="@drawable/menu_environment"
+            android:title="@string/menu_environment"/>
+        <item
+            android:id="@+id/nav_fashion"
+            android:icon="@drawable/menu_fashion"
+            android:title="@string/menu_fashion"/>
+        <item
+            android:id="@+id/nav_film"
+            android:icon="@drawable/menu_film"
+            android:title="@string/menu_film"/>
+        <item
+            android:id="@+id/nav_money"
+            android:icon="@drawable/menu_money"
+            android:title="@string/menu_money"/>
+        <item
+            android:id="@+id/nav_politics"
+            android:icon="@drawable/menu_politics"
+            android:title="@string/menu_politics"/>
+        <item
+            android:id="@+id/nav_sport"
+            android:icon="@drawable/menu_sport"
+            android:title="@string/menu_sport"/>
+        <item
+            android:id="@+id/nav_technology"
+            android:icon="@drawable/menu_technology"
+            android:title="@string/menu_technology"/>
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/menu_weather"
+            android:title="@string/menu_weather"/>
+        <item
+            android:id="@+id/nav_world"
+            android:icon="@drawable/menu_world"
+            android:title="@string/menu_world"/>
+    </group>
+
+</menu>

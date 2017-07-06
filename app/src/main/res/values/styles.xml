@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- Splash Screen -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- News Logo on Splash Screen -->
+    <style name="ImageViewLogo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dimen_30dp</item>
+        <item name="android:paddingBottom">@dimen/dimen_30dp</item>
+        <item name="android:background">@color/colorLogoBackground</item>
+        <item name="android:src">@drawable/news_logo_dark</item>
+    </style>
+
+    <!-- News Illustration on Splash Screen -->
+    <style name="ImageViewVector">
+        <item name="android:layout_width">@dimen/news_vector_width</item>
+        <item name="android:layout_height">@dimen/news_vector_height</item>
+        <item name="android:layout_marginTop">@dimen/dimen_80dp</item>
+        <item name="android:src">@drawable/newsbg</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- Empty State TextView -->
+    <style name="TextViewEmptyList">
+        <item name="android:layout_width">@dimen/dimen_200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_20dp</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Common TextView Style -->
+    <style name="GENTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <!-- List Item - News Title -->
+    <style name="ListNewsTitle" parent="GENTextView">
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- List Item - News Author -->
+    <style name="ListNewsAuthor" parent="GENTextView">
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_5dp</item>
+    </style>
+
+    <!-- List Item - News Date & Section -->
+    <style name="ListNewsDateSection" parent="GENTextView">
+        <item name="android:layout_width">@dimen/dimen_0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/textsize_xsmall</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Preferences screen -->
+    <style name="PreferencesTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+        <item name="android:listViewStyle">@style/listViewPrefs</item>
+    </style>
+
+    <style name="listViewPrefs" parent="@android:style/Widget.ListView">
+        <item name="android:cacheColorHint">@color/colorPrimary</item>
+        <item name="android:divider">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <!-- Navigation Style -->
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">@dimen/textsize_xsmall</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/dimen_30dp</item><!-- menu item height-->
+    </style>
+
+</resources>

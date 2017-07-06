@@ -1,0 +1,81 @@
+<resources>
+
+    <string name="app_name">News App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_mainactivity">Guardian News Feed</string>
+    <string name="title_settings">News Settings</string>
+
+    <!-- Menu Labels -->
+    <string name="menu_home">Home</string>
+    <string name="menu_business">Business</string>
+    <string name="menu_education">Education</string>
+    <string name="menu_environment">Environment</string>
+    <string name="menu_fashion">Fashion</string>
+    <string name="menu_film">Film</string>
+    <string name="menu_money">Money</string>
+    <string name="menu_politics">Politics</string>
+    <string name="menu_sport">Sport</string>
+    <string name="menu_technology">Technology</string>
+    <string name="menu_weather">Weather</string>
+    <string name="menu_world">World</string>
+
+
+    <!-- Placeholder Texts -->
+    <string name="placeholder_news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="placeholder_news_author">Joe Bloggs</string>
+    <string name="placeholder_news_section">Technology</string>
+    <string name="placeholder_news_date">June 30, 2017</string>
+
+    <!-- Information Strings -->
+    <string name="info_no_news">No news items found that matched your search criteria.</string>
+
+    <!-- Error & Exception messages -->
+    <string name="error_no_connection">Unfortunately your device doesn\'t have any internet connection.</string>
+    <string name="exception_invalid_orientation">Orientation is invalid</string>
+    <string name="exception_http_request">Problem making the HTTP request</string>
+    <string name="exception_url_invalid">Problem with the URL string</string>
+    <string name="exception_resp_code">Error response code</string>
+    <string name="exception_json_results">Problem retrieving JSON results</string>
+    <string name="exception_date_format">Problem formatting input date</string>
+
+
+    <!-- -->
+    <!-- Settings -->
+    <!-- -->
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">Book Finder Settings</string>
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order-by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_relevance_value</string>
+
+    <!-- Label for order-by Relevance option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_relevance_label">Most Relevant</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+
+    <!-- Label for order-by Newest option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_newest_label">Newest First</string>
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+
+    <!-- Label for order-by Oldest option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_oldest_label">Oldest First</string>
+    <string name="settings_order_by_oldest_value" translatable="false">oldest</string>
+
+    <!-- Strings for From Date Preference -->
+    <string name="settings_from_date_label">From Date (yyyy-mm-dd)</string>
+    <string name="settings_from_date_key" translatable="false">from-date</string>
+
+    <string name="setting_older_date">As you have chosen an older date, consider changing ORDER BY to Oldest for a better search</string>
+    <string name="setting_future_date">As you have chosen a date in the future, no news items will be displayed</string>
+
+    <string name="setting_show_tags_label">show-tags</string>
+    <string name="setting_show_tags_value">contributor</string>
+    <string name="setting_show_ref_label">show-references</string>
+    <string name="setting_show_ref_value">author</string>
+    <string name="setting_api_label">api-key</string>
+    <string name="setting_api_value">test</string>
+
+</resources>
