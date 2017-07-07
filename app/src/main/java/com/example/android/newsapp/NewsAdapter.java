@@ -152,8 +152,4 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
         return dateFormatted;
     }
 
-    @Override
-    public int getCount() {
-        return super.getCount();
-    }
 }
