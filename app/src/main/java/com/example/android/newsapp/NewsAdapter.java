@@ -91,6 +91,7 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
             holder = (NewsViewHolder) convertView.getTag();
         }
 
+        // First check if position is not greater than size of news feed
         if (position < getCount()) {
 
             // Find news at the given position in the list
