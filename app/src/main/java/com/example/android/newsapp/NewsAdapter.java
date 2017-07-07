@@ -26,6 +26,7 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
     private static Context mContext;
     private static Typeface mCustomFontRegular;
     private static Typeface mCustomFontItalic;
+    private List<NewsItem> mNewsList;
 
 
     /**
@@ -36,6 +37,7 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
     public NewsAdapter(Context context, List<NewsItem> newsItems) {
         super(context, 0, newsItems);
         mContext = context;
+        mNewsList = newsItems;
 
         // Set custom typeface
         mCustomFontRegular = Typeface.createFromAsset(mContext.getAssets(), "fonts/merriweather_regular.ttf");
@@ -89,34 +91,39 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
             holder = (NewsViewHolder) convertView.getTag();
         }
 
-        // Find news at the given position in the list
-        NewsItem currentNews = getItem(position);
+        if (position < getCount()) {
 
-        /** Set data to respective views within ListView */
+            // Find news at the given position in the list
+            NewsItem currentNews = getItem(position);
 
-        // Set Title
-        if ((currentNews.getNewsTitle() != null) && (currentNews.getNewsTitle().length() > 0)) {
-            title = currentNews.getNewsTitle();
+            /** Set data to respective views within ListView */
+
+            // Set Title
+            if ((currentNews.getNewsTitle() != null) && (currentNews.getNewsTitle().length() > 0)) {
+                title = currentNews.getNewsTitle();
+            }
+
+            // Set Section Name
+            if ((currentNews.getNewsSection() != null) && (currentNews.getNewsSection().length() > 0)) {
+                section = currentNews.getNewsSection();
+            }
+
+            // Set Author
+            if ((currentNews.getNewsAuthor() != null) && (currentNews.getNewsAuthor().length() > 0)) {
+                author = currentNews.getNewsAuthor();
+            }
+
+            // Set Date
+            if ((currentNews.getNewsPublishedDate() != null) && (currentNews.getNewsPublishedDate().length() > 0)) {
+                String date = currentNews.getNewsPublishedDate();
+                newsDate = formatDate(date);
+            }
+
         }
+
         holder.textViewTitle.setText(title);
-
-        // Set Section Name
-        if ((currentNews.getNewsSection() != null) && (currentNews.getNewsSection().length() > 0)) {
-            section = currentNews.getNewsSection();
-        }
         holder.textViewSection.setText(section);
-
-        // Set Author
-        if ((currentNews.getNewsAuthor() != null) && (currentNews.getNewsAuthor().length() > 0)) {
-            author = currentNews.getNewsAuthor();
-        }
         holder.textViewAuthor.setText(author);
-
-        // Set Date
-        if ((currentNews.getNewsPublishedDate() != null) && (currentNews.getNewsPublishedDate().length() > 0)) {
-            String date = currentNews.getNewsPublishedDate();
-            newsDate = formatDate(date);
-        }
         holder.textViewDate.setText(newsDate);
 
         return convertView;
@@ -144,4 +151,8 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
         return dateFormatted;
     }
 
+    @Override
+    public int getCount() {
+        return mNewsList.size();
+    }
 }

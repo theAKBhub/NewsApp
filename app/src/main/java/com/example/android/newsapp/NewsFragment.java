@@ -102,14 +102,14 @@ public class NewsFragment extends Fragment implements LoaderManager.LoaderCallba
         mNewsListView.setAdapter(mAdapter);
 
         // Get a reference to the ConnectivityManager to check state of network connectivity
-        ConnectivityManager connMgr = (ConnectivityManager)
+      //  ConnectivityManager connMgr = (ConnectivityManager)
                 getActivity().getSystemService(CONNECTIVITY_SERVICE);
 
         // Get details on the currently active default data network
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+       // NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
         // If there is a network connection, fetch data
-        if (networkInfo != null && networkInfo.isConnected()) {
+        if (isConnected()) {
             // Get a reference to the LoaderManager, in order to interact with loaders.
             LoaderManager loaderManager = getActivity().getSupportLoaderManager();
 
@@ -195,21 +195,27 @@ public class NewsFragment extends Fragment implements LoaderManager.LoaderCallba
         View progressIndicator = mView.findViewById(R.id.progress_indicator);
         progressIndicator.setVisibility(View.GONE);
 
-        // Set empty state text when no news found
-        if (newsItems == null || newsItems.size() == 0) {
-            mEmptyStateTextView.setVisibility(View.VISIBLE);
-            mEmptyStateTextView.setText(getString(R.string.info_no_news));
+        // Check if connection is still available, otherwise show appropriate message
+        if (isConnected()) {
+
+            // Set empty state text when no news found
+            if (newsItems == null || newsItems.size() == 0) {
+                mEmptyStateTextView.setVisibility(View.VISIBLE);
+                mEmptyStateTextView.setText(getString(R.string.info_no_news));
+            } else {
+                mEmptyStateTextView.setVisibility(View.GONE);
+            }
+
+            mListNews.clear();
+
+            // If there is a valid list of {@link Book}s, then add them to the adapter's
+            // data set. This will trigger the ListView to update.
+            if (newsItems != null && !newsItems.isEmpty()) {
+                mListNews.addAll(newsItems);
+                mAdapter.notifyDataSetChanged();
+            }
         } else {
-            mEmptyStateTextView.setVisibility(View.GONE);
-        }
-
-        mListNews.clear();
-
-        // If there is a valid list of {@link Book}s, then add them to the adapter's
-        // data set. This will trigger the ListView to update.
-        if (newsItems != null && !newsItems.isEmpty()) {
-            mListNews.addAll(newsItems);
-            mAdapter.notifyDataSetChanged();
+            mEmptyStateTextView.setText(R.string.error_no_connection);
         }
     }
 
@@ -221,6 +227,30 @@ public class NewsFragment extends Fragment implements LoaderManager.LoaderCallba
     @Override
     public void onRefresh() {
         getActivity().getSupportLoaderManager().restartLoader(mLoaderId, null, this);
+    }
+
+    /**
+     * Method to check network connectivity
+     * @return true/false
+     */
+    public boolean isConnected() {
+        boolean hasNetwork;
+
+        // Get a reference to the ConnectivityManager to check state of network connectivity
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getActivity().getSystemService(CONNECTIVITY_SERVICE);
+
+        // Get details on the currently active default data network
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        // If there is a network connection, fetch data
+        if (networkInfo != null && networkInfo.isConnected()) {
+            hasNetwork = true;
+        } else {
+            hasNetwork = false;
+        }
+
+        return hasNetwork;
     }
 
 }
