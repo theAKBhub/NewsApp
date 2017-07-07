@@ -154,6 +154,6 @@ public class NewsAdapter extends ArrayAdapter<NewsItem> {
 
     @Override
     public int getCount() {
-        return mNewsList.size();
+        return super.getCount();
     }
 }
