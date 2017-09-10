@@ -103,7 +103,7 @@ public class NewsFragment extends Fragment implements LoaderManager.LoaderCallba
 
         // Get a reference to the ConnectivityManager to check state of network connectivity
       //  ConnectivityManager connMgr = (ConnectivityManager)
-                getActivity().getSystemService(CONNECTIVITY_SERVICE);
+              //  getActivity().getSystemService(CONNECTIVITY_SERVICE);
 
         // Get details on the currently active default data network
        // NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
